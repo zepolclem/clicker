@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var gameIsInProgress = false
     @State var score = 0
-    @State var nickName = "Sheldon"
+    @AppStorage("nickName") var nickName = "Sheldon"
     @AppStorage("bestScore") var bestScore = 0
     @AppStorage("bestScoreName") var bestScoreName = ""
     var body: some View {
