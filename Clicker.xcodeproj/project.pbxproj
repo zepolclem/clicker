@@ -11,6 +11,7 @@
 		F80302E02A93B286008DD59E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80302DF2A93B286008DD59E /* ContentView.swift */; };
 		F80302E22A93B287008DD59E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80302E12A93B287008DD59E /* Assets.xcassets */; };
 		F80302E52A93B287008DD59E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80302E42A93B287008DD59E /* Preview Assets.xcassets */; };
+		F8F913052A98F269003FFE92 /* EditableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F913042A98F269003FFE92 /* EditableTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F80302DF2A93B286008DD59E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F80302E12A93B287008DD59E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F80302E42A93B287008DD59E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8F913042A98F269003FFE92 /* EditableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				F80302DF2A93B286008DD59E /* ContentView.swift */,
 				F80302E12A93B287008DD59E /* Assets.xcassets */,
 				F80302E32A93B287008DD59E /* Preview Content */,
+				F8F913042A98F269003FFE92 /* EditableTextView.swift */,
 			);
 			path = Clicker;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F913052A98F269003FFE92 /* EditableTextView.swift in Sources */,
 				F80302E02A93B286008DD59E /* ContentView.swift in Sources */,
 				F80302DE2A93B286008DD59E /* ClickerApp.swift in Sources */,
 			);
