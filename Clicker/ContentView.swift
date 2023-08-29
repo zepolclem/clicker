@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var gameIsInProgress = false
     @State var score = 0
+    @State var resultList:[GameResult] = []
     @AppStorage("nickName") var nickName = "Sheldon"
     @AppStorage("bestScore") var bestScore = 0
     @AppStorage("bestScoreName") var bestScoreName = ""
@@ -32,32 +33,47 @@ struct ContentView: View {
                     Image(systemName: "star")
                 }
             }
+            
+           GameResultListView(resultList: resultList)
 
             if gameIsInProgress == true {
                 Image(systemName: "plus.square")
                     .font(.title)
                     .onTapGesture {
-                        score += 1
+                        userTouchClick()
                     }
             }
             Spacer()
             if gameIsInProgress == false {
                 Button("Nouvelle partie"){
-                    score = 0
-                    gameIsInProgress = true
-                    Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { (_) in
-                        gameIsInProgress = false
-                        if score > bestScore {
-                            bestScore = score
-                            bestScoreName = nickName
-                        }
-                    }
-                
+                  userTouchedStartButton()
                 }
                 .padding()
                 
             }
         }
+    }
+    
+    func userTouchedStartButton(){
+        score = 0
+        gameIsInProgress = true
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { (_) in
+          gameDidFinish()
+        }
+    }
+    
+    func userTouchClick(){
+        score += 1
+    }
+    
+    func gameDidFinish(){
+        gameIsInProgress = false
+        if score > bestScore {
+            bestScore = score
+            bestScoreName = nickName
+        }
+        let result = GameResult(playerName: nickName, score: score)
+        resultList.append(result)
     }
 }
 
